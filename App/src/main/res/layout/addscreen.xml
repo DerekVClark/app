@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CB905E"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/stockTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/caprasimo"
+            android:gravity="center"
+            android:text="@string/appTitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#733A15"
+            android:textSize="48sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="0.2">
+        <EditText
+            android:id="@+id/editItemNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:height="48dp"
+            android:autofillHints=""
+            android:background="@drawable/edittextborder"
+            android:ems="10"
+            android:fontFamily="@font/caprasimo"
+            android:hint="@string/prompt_itemNumber"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColorHint="#CCB3A4"
+            android:tooltipText="Lol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stockTitle" />
+
+        <EditText
+            android:id="@+id/editItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:height="48dp"
+            android:autofillHints=""
+            android:background="@drawable/edittextborder"
+            android:ems="10"
+            android:fontFamily="@font/caprasimo"
+            android:hint="@string/itemName"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColorHint="#CCB3A4"
+            android:tooltipText="Lol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stockTitle" />
+
+        <EditText
+            android:id="@+id/editItemQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:height="48dp"
+            android:autofillHints=""
+            android:background="@drawable/edittextborder"
+            android:ems="10"
+            android:fontFamily="@font/caprasimo"
+            android:hint="@string/itemQuantity"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColorHint="#CCB3A4"
+            android:tooltipText="Lol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stockTitle" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:fontFamily="@font/caprasimo"
+                android:id="@+id/button_back"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:backgroundTint="#723A15"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                tools:ignore="NestedWeights,VisualLintButtonSize" />
+
+            <Button
+                android:fontFamily="@font/caprasimo"
+                android:id="@+id/editItem"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:backgroundTint="#723A15"
+                android:textColor="@color/white"
+                android:text="@string/add_item"
+                tools:ignore="VisualLintButtonSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

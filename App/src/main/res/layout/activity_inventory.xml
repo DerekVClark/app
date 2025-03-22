@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC915F"
+    tools:context=".Inventory">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/stockTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/caprasimo"
+            android:text="@string/appTitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#733A15"
+            android:textSize="48sp"
+            android:gravity="center"/>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:contentDescription="ScrollView for cards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="HardcodedText">
+
+            <LinearLayout
+                android:id="@+id/itemList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <Button
+                android:fontFamily="@font/caprasimo"
+                android:id="@+id/button_add"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/add"
+                android:textColor="@color/white"
+                android:backgroundTint="#723A15"
+                android:layout_weight="1"
+                tools:ignore="NestedWeights,VisualLintButtonSize" />
+
+            <Button
+                android:fontFamily="@font/caprasimo"
+                android:id="@+id/button_zero"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/zeroes"
+                android:textColor="@color/white"
+                android:backgroundTint="#723A15"
+                android:layout_weight="1"
+                tools:ignore="VisualLintButtonSize" />
+            <Button
+                android:fontFamily="@font/caprasimo"
+                android:id="@+id/button_sms"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/sms"
+                android:textColor="@color/white"
+                android:backgroundTint="#723A15"
+                android:layout_weight="1"
+                tools:ignore="VisualLintButtonSize" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
