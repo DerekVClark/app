@@ -24,6 +24,7 @@ public class addItem extends AppCompatActivity {
         // Declare Button variables
         Button addItem = findViewById(R.id.editItem);
         Button button_back = findViewById(R.id.button_back);
+        Button camera = findViewById(R.id.barcode_scanner);
 
         addItem.setOnClickListener(v -> { // Set a click listener for the addItem button
             String itemNumber = editItemNumber.getText().toString(); // Get the text from the editItemNumber EditText and store it in the itemNumber variable
@@ -48,6 +49,12 @@ public class addItem extends AppCompatActivity {
             Intent intent1 = new Intent(addItem.this, Inventory.class); // Create a new intent to start the Inventory activity
             intent1.putExtra("username", username); // Pass the username to the Inventory activity
             startActivity(intent1); // Start the Inventory activity
+        });
+
+        camera.setOnClickListener(v -> {
+            Intent intent1 = new Intent(addItem.this, camerascreen.class);
+            intent1.putExtra("username", username);
+            startActivity(intent1);
         });
     }
 }

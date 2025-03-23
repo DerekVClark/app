@@ -94,41 +94,55 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/stockTitle" />
-        </LinearLayout>
 
-        <LinearLayout
-            style="?android:attr/buttonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.05"
-            android:orientation="horizontal"
-            android:gravity="bottom">
+            <LinearLayout
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"
+                android:gravity="top"
+                android:orientation="vertical">
 
-            <Button
-                android:fontFamily="@font/caprasimo"
-                android:id="@+id/button_back"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:backgroundTint="#723A15"
-                android:text="@string/back"
-                android:textColor="@color/white"
-                tools:ignore="NestedWeights,VisualLintButtonSize" />
+                <Button
+                    android:id="@+id/barcode_scanner"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="800px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
 
-            <Button
-                android:fontFamily="@font/caprasimo"
-                android:id="@+id/editItem"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:backgroundTint="#723A15"
-                android:textColor="@color/white"
-                android:text="@string/add_item"
-                tools:ignore="VisualLintButtonSize" />
+                    android:backgroundTint="#723A15"
+                    android:fontFamily="@font/caprasimo"
+                    android:text="@string/barcode_scanner"
+                    android:textColor="@color/white"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <Button
+                    android:id="@+id/editItem"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="800px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:backgroundTint="#723A15"
+                    android:fontFamily="@font/caprasimo"
+                    android:text="@string/add_item"
+                    android:textColor="@color/white"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <Button
+                    android:id="@+id/button_back"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="800px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:backgroundTint="#723A15"
+                    android:fontFamily="@font/caprasimo"
+                    android:text="@string/back"
+                    android:textColor="@color/white"
+                    tools:ignore="NestedWeights,VisualLintButtonSize" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

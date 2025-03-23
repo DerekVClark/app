@@ -44,4 +44,6 @@
     <string name="item_name">Item Name:</string>
     <string name="item_quantity">Quantity:</string>
     <string name="Submit">Submit</string>
+    <string name="allow_camera_access">Allow Camera Access?</string>
+    <string name="barcode_scanner">Barcode Scanner</string>
 </resources>
