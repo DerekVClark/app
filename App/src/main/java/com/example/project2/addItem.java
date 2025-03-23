@@ -51,10 +51,24 @@ public class addItem extends AppCompatActivity {
             startActivity(intent1); // Start the Inventory activity
         });
 
-        camera.setOnClickListener(v -> {
-            Intent intent1 = new Intent(addItem.this, camerascreen.class);
-            intent1.putExtra("username", username);
-            startActivity(intent1);
+        camera.setOnClickListener(v -> { // Set a click listener for the camera button
+            Intent intent1 = new Intent(addItem.this, camerascreen.class); // Creates a new intent to start the camera activity
+            startActivityForResult(intent1, 1); // Waits for barcode data
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK) { // If result code ok
+            if (data != null) {
+                String itemNumber = data.getStringExtra("Item_number"); // Gets item number from barcode data
+                String itemName = data.getStringExtra("Item_name"); // Gets item name from barcode data
+
+
+                editItemNumber.setText(itemNumber); // Sets text field to item number
+                editItemName.setText(itemName); //Sets text field to item name
+            }
+        }
     }
 }
