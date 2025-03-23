@@ -72,6 +72,13 @@ public class LoginDatabase extends SQLiteOpenHelper {
         return exists; //returns the boolean value if username and password exists
     }
 
+    public Cursor getUserPassword(String username){ //Gets all items from the inventory table where the username matches the username passed in
+        SQLiteDatabase db = this.getReadableDatabase(); //Gets database
+        String query = "select password from user where username = ?"; //queries username ? placeholder
+        String[] args = {username}; //Sets the placeholder to the username
+        return db.rawQuery(query, args); //Returns the cursor with the query and args
+    }
+
     public Cursor getUserItems(String username){ //Gets all items from the inventory table where the username matches the username passed in
         SQLiteDatabase db = this.getReadableDatabase(); //Gets database
         String query = "select * from inventory where username = ?"; //queries username ? placeholder

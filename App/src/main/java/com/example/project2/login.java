@@ -44,5 +44,9 @@ public class login extends AppCompatActivity {
             startActivity(intent); // Start the register activity
         });
 
+        forgotPasswordButton.setOnClickListener(v -> { // Set onClickListener for forgot password button
+            Intent intent1 = new Intent(login.this, forgotpassword.class); // Create intent to forgot password activity
+            startActivity(intent1);
+        });
     }
 }
